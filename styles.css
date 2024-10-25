@@ -1,0 +1,95 @@
+body {
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Georgia', serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    border: 5px solid #fff;
+    border-radius: 20px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h1 {
+    color: #ff6b6b;
+    font-size: 3.5em;
+    margin: 0;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.3em;
+    cursor: pointer;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ff3b3b;
+    transform: scale(1.05);
+}
+
+#funny-message {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #555;
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+#heartfelt-message {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #ff69b4;
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: url('https://i.imgur.com/xE8TQfO.png') no-repeat center center;
+    background-size: contain;
+    opacity: 0.1;
+    animation: rotate 20s infinite linear;
+}
+
+@keyframes rotate {
+    from { transform: translateX(-50%) rotate(0); }
+    to { transform: translateX(-50%) rotate(360deg); }
+}
